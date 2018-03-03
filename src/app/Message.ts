@@ -1,5 +1,5 @@
 export class Message {
-  public  timestamp = new Date();
+  public  timestamp;
   public readonly sender = '';
   public readonly body = '';
 

@@ -21,7 +21,7 @@ export class AppComponent {
 
   sendMessage(message: Message) {
     console.log(message);
+    message.timestamp = new Date();
     this.repo.add(message);
-
   }
 }
