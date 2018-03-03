@@ -6,6 +6,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { environment } from '../environments/environment';
 import { ChatFormComponent } from './chat-form/chat-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MessageService } from './message.service';
 
 
 @NgModule({
@@ -15,6 +16,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AngularFirestoreModule,
     FormsModule,
     ReactiveFormsModule,
+  ],
+  providers: [
+    MessageService
   ],
   declarations: [ AppComponent, ChatFormComponent ],
   bootstrap: [ AppComponent ]
