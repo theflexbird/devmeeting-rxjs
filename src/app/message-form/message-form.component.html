@@ -1,0 +1,10 @@
+<form [formGroup]="form" (ngSubmit)="formSubmitSubject.next()">
+  <label>Name</label>
+  <input  type="text" [formControlName]="'sender'"/>
+  <label>Message</label>
+  <input  type="text"  [formControlName]="'body'"/>
+  <div>
+    <button type="reset" >Reset</button>
+    <button type="submit" [disabled]="form.invalid">{{ submitButtonText }}</button>
+  </div>
+</form>
