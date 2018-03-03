@@ -1,8 +1,6 @@
 <form [formGroup]="form" (ngSubmit)="formSubmitSubject.next()">
       <label>Sender</label>
       <input type="text" [formControlName]="'sender'" />
-      <label>Date</label>
-      <input type="hidden" [formControlName]="'timestamp'" />
       <label>Text</label>
       <input type="text" [formControlName]="'body'" />
   <div>

@@ -14,6 +14,6 @@ export class MessageService {
   }
 
   add(message: Model) {
-    this.collection.add(message);
+    this.collection.add({...message});
   }
 }
