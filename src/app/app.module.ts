@@ -4,6 +4,8 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { environment } from '../environments/environment';
+import { ChatFormComponent } from './chat-form/chat-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,8 +13,10 @@ import { environment } from '../environments/environment';
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase, 'rxjslab'),
     AngularFirestoreModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent, ChatFormComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {}

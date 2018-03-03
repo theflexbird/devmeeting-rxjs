@@ -1,0 +1,12 @@
+<form [formGroup]="form" (ngSubmit)="formSubmitSubject.next()">
+      <label>Sender</label>
+      <input type="text" [formControlName]="'sender'" />
+      <label>Date</label>
+      <input type="text" min="0" [formControlName]="'timestamp'" />
+      <label>Text</label>
+      <input type="text" [formControlName]="'body'" />
+  <div>
+      <button type="reset">Reset</button>
+      <button type="submit" [disabled]="form.invalid">{{ submitButtonText }}</button>
+  </div>
+</form>
